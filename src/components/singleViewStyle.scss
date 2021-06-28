@@ -1,0 +1,33 @@
+.imageClass{
+    
+    // top:50%;
+    // left:50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    
+}
+.imageClass::before{
+    position: absolute;
+    content:'';
+    top:400px;
+    left: -180px;
+    height: 250px;
+    width: 100px;
+    background-color: rgb(255,255,255,0.3);
+    transform: skew(-30deg);
+    transition: 0.5s;
+}
+.imageClass img{
+    border-radius: 8px;
+    margin-top: 400px;
+    
+}
+.imageClass:hover:before{
+    left:200px;
+}
+.singleView-paper{
+    padding: 30px !important;
+    max-width: 400 !important;
+    margin-top: -240px !important;
+    border-radius: 12px !important;
+}

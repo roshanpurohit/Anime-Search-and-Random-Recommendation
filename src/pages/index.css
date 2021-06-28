@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+html,body {
+   background-color:darkgray !important;
+  }
+
+
+
+.navbar-color{
+  background-color:rgb(0,0,0);
+}
+.font-color{
+  color:honeydew !important;
+  font-family: 'Product Sans';
+  font-size: 30px;
+}
+.button-color{
+  background-color:honeydew !important;
+  border-radius: 10px !important;
+}
+.button-color:hover{
+  background-color: lightgrey;
+  opacity: 0.8;
+}
+.singleContainer{
+  display:flex;
+  flex-direction: column;
+}
+.singlePaper{
+  padding: 15px;
+  margin:10px;
+  border-radius: 8px;
+}
+.navBar-iconButton{
+  color: black !important;
+  background-color: aliceblue !important;
+}
+.navBar-searchBar{
+     border-radius: 20px !important;
+}
+.navBar-form{
+   display: flex;
+}
+.about-Paper{
+  margin-top: 180px !important;
+  border-radius: 20px !important;
+  background: black !important;
+  padding: 20px !important;
+  display: flex;
+  flex-direction: row;
+  
+}
+.about-Typo{
+  font-family:'Product Sans' !important;
+  padding-left: 40px !important;
+  color:white !important;
+}
+
