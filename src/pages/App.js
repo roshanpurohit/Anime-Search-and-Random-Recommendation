@@ -31,7 +31,7 @@ function App() {
       <Navbar />
         
             <Switch>
-              <Route exact  path="/" >
+              <Route exact  path="/random-anime-recommendation-and-search-list/" >
                <Home />
               </Route>
               <Route exact  path="/about" >
