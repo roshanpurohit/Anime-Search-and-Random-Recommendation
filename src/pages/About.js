@@ -18,7 +18,7 @@ const About = () => {
             with little info on requested results, pulls data from <br/><i>MyAnimeList</i> API<br/>
             Made using : React js,Jikan API<br/>
             Done by: Roshan Purohit<br/>
-            <Link href="https://github.com/roshanpurohit">GitHub</Link>
+            <Link href="https://github.com/roshanpurohit" className="about-link">GitHub</Link>
     </Typography>
      </Paper>
      </Grid>

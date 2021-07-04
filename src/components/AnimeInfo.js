@@ -27,19 +27,19 @@ const AnimeInfo= ({info})=> {
                </div>
             </Grid>
         <Paper elevation={3} className="singleView-paper" >
-         <Typography variant="h5" component="h2">
+         <Typography variant="h5" component="h2" className="singleView-typo">
              Title:{title}</Typography>
-         <Typography variant="h5" component="h2">
-             Airing:{airing}</Typography>
-         <Typography variant="h5" component="h2">Broadcast:{broadcast}
+         <Typography variant="h5" component="h2" className="singleView-typo">
+             Airing:{ airing?"Yes":"False"}</Typography>
+         <Typography variant="h5" component="h2" className="singleView-typo">Broadcast:{broadcast}
          </Typography>
-         <Typography variant="h5" component="h2">Score:{score}
+         <Typography variant="h5" component="h2" className="singleView-typo">Score:{score}
          </Typography>
-         <Typography variant="h5" component="h2">Rating:{rating}
+         <Typography variant="h5" component="h2" className="singleView-typo">Rating:{rating}
          </Typography>
-         <Typography variant="h5" component="h2">Episodes:{episodes}
+         <Typography variant="h5" component="h2" className="singleView-typo">Episodes:{episodes}
          </Typography>
-         <Link type="button" variant="body1" href={url}>
+         <Link type="button" variant="body1" href={url} style={{color:"lightgreen"}}>
              MyAnimeList
          </Link>
         </Paper>

@@ -20,7 +20,7 @@ const NavBar = () => {
     return (  
        
 <Navbar className="navbar-color" expand="lg" variant="light" position="sticky">
-  <Navbar.Brand href="/"><div className="font-color">ANIME LIST VIEWER</div>
+   <Navbar.Brand href="/"><div className="font-color">ANIME LIST VIEWER</div>
  </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">

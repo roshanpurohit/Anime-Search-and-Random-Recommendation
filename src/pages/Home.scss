@@ -2,17 +2,55 @@
     border-radius: 5px;
     padding: 30px;
     z-index: 1;
-    background-color: honeydew;
+    background-color: white;
+   
   }
 .home-FormControl{
     display:flex !important;
     flex-direction: row!important;
     justify-content: center;
-    
 }
 .home-input{
     width:300px;
+    font-family: 'Product Sans' !important;
 }
 .home-iconButton{
     flex:0;
+}
+.home-paper{
+  
+    border-radius: 20px !important;
+    
+    padding:40px !important;
+    display: flex;
+    flex-direction: row;
+    
+  }
+.home-Typo{
+    font-family:'Product Sans' !important;
+    color:pink !important;
+    
+  }
+.ORcard{
+    padding: 40px !important;
+    width: 70px !important;
+    height: 70px !important;
+    border-radius:10px !important;
+    font-size: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center !important;
+
+}
+.home-recommendButton{
+    background-color: rgb(64, 82, 243) !important;
+    color:rgb(255, 255, 255) !important;
+}
+.home-recommendButton:hover{
+    transform: scale(1.1);
+}
+.or-img{
+    position: relative;
+    top : 0px;
+    left:150px;
 }

@@ -9,12 +9,14 @@
     justify-content: center;
     flex-direction: column;
     padding: 10px;
-   
-}
-.animeCard__paper:hover{
+    background-color: rgb(64,82,243) !important;
+    color:pink !important;
     
-    opacity: 0.8;
+   
 }
 .animeCard__container:hover{
     transform: scale(1.094);
+}
+.animeCard__typo{
+    font-family: 'Product Sans' !important;
 }

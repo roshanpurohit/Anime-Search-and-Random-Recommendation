@@ -2,8 +2,8 @@
 import  {useContext,useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import { searchContext } from '../context/search';
-import {Grid,FormControl,Input,IconButton} from '@material-ui/core';
-import animeMain from '../components/animeMain.png';
+import {Grid,FormControl,Input,IconButton,Button,Paper,Typography} from '@material-ui/core';
+import or from '../components/or.png';
 import SearchIcon from '@material-ui/icons/Search';
 import '../pages/Home.scss';
 const Home = () => {
@@ -18,13 +18,9 @@ const Home = () => {
             move.push('./results');
         })
     }
-    // useEffect(()=>{
-    //  search.search('Naruto').then(
-    //      (data)=>{
-    //          console.log(data);
-    //      }
-    // )
-    //  },[search])
+    const handleRecommendClick=()=>{
+        move.push('./random-recommendation')
+        }
     return (
         <div>
         <Grid
@@ -33,11 +29,28 @@ const Home = () => {
          justify="center"
          alignContent="center"
          alignItems = "center"
+         spacing={5}
          >
-         <Grid item>
-         <img src ={ animeMain } alt="" height="500" width="800" />
-         </Grid>
-         <Grid  item>
+             <Grid item xs={12}>
+
+             </Grid>
+             <Grid item xs={12}>
+                 
+             </Grid>
+             <Grid item xs>
+            <Paper elevation={3} className="home-paper">
+                 <Button  className="home-recommendButton" onClick={handleRecommendClick}>
+                     <Typography variant="h5" component="h2"  className="home-Typo">Recommend Random Anime</Typography></Button>
+             </Paper>
+             </Grid>
+             <Grid item xs 
+              
+             >
+           <img src={or} alt="" width={120} height={120} className="or-img" /> 
+             </Grid>
+         
+         <Grid  item xs >
+
              <form className="home-form">
          <FormControl type="submit" className="home-FormControl">
           <Input
@@ -57,9 +70,9 @@ const Home = () => {
             <SearchIcon/>
              </IconButton>
          </FormControl>
-         </form>
+          </form>
          </Grid>
-         </Grid>
+          </Grid>
          </div>
     );
     

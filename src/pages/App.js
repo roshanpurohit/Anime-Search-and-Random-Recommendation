@@ -2,6 +2,7 @@ import Home from './Home';
 import Navbar from "../components/Navbar";
 import Results from './Results';
 import ViewSingle from './ViewSingle';
+import RandomRec from './RandomRec';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import { useState } from 'react';
 import { searchContext} from '../context/search';
@@ -41,6 +42,9 @@ function App() {
               </Route>
               <Route exact  path="/ViewSingle" >
                <ViewSingle />
+              </Route>
+              <Route exact  path="/random-recommendation" >
+               <RandomRec/>
               </Route>
               
             </Switch>

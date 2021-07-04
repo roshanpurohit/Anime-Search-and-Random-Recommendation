@@ -7,26 +7,38 @@
 }
 
 html,body {
-   background-color:darkgray !important;
+   background: url(../components/animeBg.jpg) !important;
+   background-size: 100% !important;
+   max-width: 100%;
+   overflow-x:hidden;
+   
   }
 
 
 
 .navbar-color{
   background-color:rgb(0,0,0);
+  
 }
 .font-color{
-  color:honeydew !important;
-  font-family: 'Product Sans';
+  background-color: rgb(64, 82, 243) !important;
+  color: pink !important;
+  font-family: 'Product Sans' !important;
   font-size: 30px;
+  border-radius: 8px;
+  padding:4px;
 }
 .button-color{
-  background-color:honeydew !important;
+  
+  background-color: rgb(64, 82, 243) !important;
+  color:pink !important; 
   border-radius: 10px !important;
+  font-family: 'Product Sans' !important;
 }
 .button-color:hover{
-  background-color: lightgrey;
-  opacity: 0.8;
+  background-color: pink !important;
+  /* opacity: 0.8; */
+  color:rgb(64, 82, 243) !important;
 }
 .singleContainer{
   display:flex;
@@ -38,11 +50,14 @@ html,body {
   border-radius: 8px;
 }
 .navBar-iconButton{
-  color: black !important;
-  background-color: aliceblue !important;
+  color:rgb(64, 82, 243) !important;
+  background-color: pink !important;
+  
 }
 .navBar-searchBar{
      border-radius: 20px !important;
+     font-family:'Product Sans' !important;
+
 }
 .navBar-form{
    display: flex;
@@ -50,7 +65,7 @@ html,body {
 .about-Paper{
   margin-top: 180px !important;
   border-radius: 20px !important;
-  background: black !important;
+  background: rgb(64, 82, 243) !important;
   padding: 20px !important;
   display: flex;
   flex-direction: row;
@@ -59,6 +74,62 @@ html,body {
 .about-Typo{
   font-family:'Product Sans' !important;
   padding-left: 40px !important;
-  color:white !important;
+  color:pink !important;
 }
+.about-link{
+   color: rgb(31, 209, 61) !important;
+}
+p {
+  color: white;
+  font: 300 2em/150% Impact;
+  text-align: center;}
+.loading{
+  font-family: 'Product Sans' !important;
+  color:pink !important;
+  width:550px !important;
+    
+  
+}
+.loading:after {
+  content: ' .';
+  animation: dots 1s steps(5, end) infinite;}
 
+@keyframes dots {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: pink;
+    text-shadow:
+      .25em 0 0 rgba(0,0,0,0),
+      .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+      .25em 0 0 rgb(209, 189, 189),
+      .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+      .25em 0 0 pink,
+      .5em 0 0 pink;}}
+      
+.recommend-paper{
+  background-color: rgb(64, 82, 243) !important;
+  border-radius: 10px !important;
+  width:fit-content!important;
+  display: flex;
+  flex-direction: row;
+}
+.random-typo
+{
+  font-family: 'Product Sans' !important;
+  width:fit-content!important;
+  color:pink !important;
+  background-color: rgb(64, 82, 243) !important;
+  /* border-radius: 5px; */
+  justify-content: center !important;
+}
+.random-image{
+  border-radius: 8px;
+}
