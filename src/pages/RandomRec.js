@@ -4,6 +4,7 @@ import Cached from  "@material-ui/icons/Cached";
 const  RandomRec = () => {
   const  [randomId,setRandom] = useState(Math.floor(Math.random()*1000 + 1));
   const [ data,setData]  = useState(null);
+  const[serverError,setServerError] = useState(false);
   
     const handleClick=()=>{
        setRandom(0);
@@ -20,14 +21,25 @@ const  RandomRec = () => {
                 console.log("Try another ID");
                  setRandom(Math.floor(Math.random()*1000 + 1));
               })
-          } }
+          } 
           else
+          {
+            console.log("Server is unavailable");
+            setServerError(true);
+           
+          }
+        }
+         else
           {
              response.json().then((data)=>{
               setData(data);
             })
           }
           
+        })
+        .catch(err=>{
+          console.log(err);
+         setServerError(true);
         })
       
     },[randomId])
@@ -40,9 +52,9 @@ const  RandomRec = () => {
         alignContent="center"
         spacing = {3}
          >
-           <Grid item  xs={12}>
+          {!serverError && (<Grid item  xs={12}>
              <Typography  variant="h3" component="h2" className= "random-typo" >Recommendation for you </Typography>
-           </Grid>
+           </Grid>) }
            {
              data && (
            <Grid item>
@@ -73,8 +85,9 @@ const  RandomRec = () => {
                  <b><u>Title:</u></b>   {data.title}<br/>
                  <b><u>Synopsis:</u></b>   {data.synopsis}<br/>
                  <Link href={data.url} className="about-link">MyAnimeList</Link>
-                 </Typography>  
-                 </div> )) || (<p className="loading">Generating Recommendation</p>)
+                 </Typography> 
+                 </div> )) || (!serverError && <p className="loading">Generating Recommendation</p>) || 
+                 (serverError && <Typography variant="h4" component="h2" className="font-color">Server is unavailable at the moment<br/>Try Again Later</Typography>)
                   }
                
 

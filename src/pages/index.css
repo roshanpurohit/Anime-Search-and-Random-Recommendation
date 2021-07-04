@@ -8,7 +8,7 @@
 
 html,body {
    background: url(../components/animeBg.jpg) !important;
-   background-size: 100% !important;
+   background-size:cover !important;
    max-width: 100%;
    overflow-x:hidden;
    
