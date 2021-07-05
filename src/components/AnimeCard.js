@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './AnimeCardStyle.scss';
 import {useHistory} from 'react-router-dom';
-import { GridListTile,Typography,Paper,Link,Grid} from '@material-ui/core';
+import { GridListTile,Typography,Paper,Link,Grid,Tooltip} from '@material-ui/core';
 import {searchContext} from '../context/search';
 const AnimeCard = ({single})=> {
     const move = useHistory();
@@ -27,7 +27,9 @@ const AnimeCard = ({single})=> {
           <Grid container item xs={12} >
             <Paper className = "animeCard__paper">
               <img src={imageUrl} alt={title} style={ {maxHeight:300} } />
+              <Tooltip title={single.title} placement="top">
               <Typography variant="h5" component="h2" className="animeCard__typo">{title}</Typography>
+              </Tooltip>
               <Typography variant="body2" component="h2" paragraph={true} className="animeCard__typo" >
                   {synopsis}
               </Typography>
