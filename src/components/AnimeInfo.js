@@ -30,7 +30,7 @@ const AnimeInfo= ({info})=> {
          <Typography variant="h5" component="h2" className="singleView-typo">
              Title:{title}</Typography>
          <Typography variant="h5" component="h2" className="singleView-typo">
-             Airing:{ airing?"Yes":"False"}</Typography>
+             Airing:{ airing?"Yes":"No"}</Typography>
          <Typography variant="h5" component="h2" className="singleView-typo">Broadcast:{broadcast}
          </Typography>
          <Typography variant="h5" component="h2" className="singleView-typo">Score:{score}

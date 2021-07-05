@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Results from './Results';
 import ViewSingle from './ViewSingle';
 import RandomRec from './RandomRec';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {HashRouter as Router,Switch,Route} from 'react-router-dom';
 import { useState } from 'react';
 import { searchContext} from '../context/search';
 import About from './About';
@@ -27,11 +27,12 @@ function App() {
       {animeData,singleData,setData,setSingleData,search}
       } >
     <div className="App">
+      <div className="blur">
     <Router>
       <Navbar />
         
             <Switch>
-              <Route exact  path="/random-anime-recommendation-and-search-list/" >
+            <Route exact  path="/random-anime-recommendation-and-search-list/" >
                <Home />
               </Route>
               <Route exact  path="/about" >
@@ -49,6 +50,7 @@ function App() {
               
             </Switch>
         </Router>
+        </div>
        </div>
     </searchContext.Provider>
   );

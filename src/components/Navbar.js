@@ -20,7 +20,7 @@ const NavBar = () => {
     return (  
        
 <Navbar className="navbar-color" expand="lg" variant="light" position="sticky">
-   <Navbar.Brand href="/"><div className="font-color">ANIME LIST VIEWER</div>
+   <Navbar.Brand href="/random-anime-recommendation-and-search-list/#/"><div className="font-color">ANIME LIST VIEWER</div>
  </Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
@@ -38,8 +38,8 @@ const NavBar = () => {
             <SearchIcon/>
              </IconButton>
     </Form>
-      <Nav.Link href="/" ><Button  variant="custom" className ="button-color" >Home</Button> </Nav.Link>
-      <Nav.Link href="/about"><Button  variant="custom" className ="button-color" >About</Button></Nav.Link>
+      <Nav.Link href="/random-anime-recommendation-and-search-list/" ><Button  variant="custom" className ="button-color" >Home</Button> </Nav.Link>
+      <Nav.Link href="/random-anime-recommendation-and-search-list/#/about"><Button  variant="custom" className ="button-color" >About</Button></Nav.Link>
       </Nav>
   </Navbar.Collapse>
 </Navbar>
