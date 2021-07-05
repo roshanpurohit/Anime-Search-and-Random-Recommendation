@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/random-anime-recommendation-and-search-list/static/css/main.78a348c7.chunk.css",
-    "main.js": "/random-anime-recommendation-and-search-list/static/js/main.579c5626.chunk.js",
-    "main.js.map": "/random-anime-recommendation-and-search-list/static/js/main.579c5626.chunk.js.map",
+    "main.js": "/random-anime-recommendation-and-search-list/static/js/main.29ddd1e7.chunk.js",
+    "main.js.map": "/random-anime-recommendation-and-search-list/static/js/main.29ddd1e7.chunk.js.map",
     "runtime-main.js": "/random-anime-recommendation-and-search-list/static/js/runtime-main.952b13df.js",
     "runtime-main.js.map": "/random-anime-recommendation-and-search-list/static/js/runtime-main.952b13df.js.map",
     "static/css/2.61b4cb56.chunk.css": "/random-anime-recommendation-and-search-list/static/css/2.61b4cb56.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.66772d92.chunk.js",
     "static/css/main.78a348c7.chunk.css",
-    "static/js/main.579c5626.chunk.js"
+    "static/js/main.29ddd1e7.chunk.js"
   ]
 }
