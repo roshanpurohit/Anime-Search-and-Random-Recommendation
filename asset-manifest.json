@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/random-anime-recommendation-and-search-list/static/css/main.ea2ecf1f.chunk.css",
-    "main.js": "/random-anime-recommendation-and-search-list/static/js/main.7ac447a3.chunk.js",
-    "main.js.map": "/random-anime-recommendation-and-search-list/static/js/main.7ac447a3.chunk.js.map",
+    "main.js": "/random-anime-recommendation-and-search-list/static/js/main.79678bbc.chunk.js",
+    "main.js.map": "/random-anime-recommendation-and-search-list/static/js/main.79678bbc.chunk.js.map",
     "runtime-main.js": "/random-anime-recommendation-and-search-list/static/js/runtime-main.952b13df.js",
     "runtime-main.js.map": "/random-anime-recommendation-and-search-list/static/js/runtime-main.952b13df.js.map",
     "static/css/2.61b4cb56.chunk.css": "/random-anime-recommendation-and-search-list/static/css/2.61b4cb56.chunk.css",
-    "static/js/2.2c73301e.chunk.js": "/random-anime-recommendation-and-search-list/static/js/2.2c73301e.chunk.js",
-    "static/js/2.2c73301e.chunk.js.map": "/random-anime-recommendation-and-search-list/static/js/2.2c73301e.chunk.js.map",
+    "static/js/2.3a29a369.chunk.js": "/random-anime-recommendation-and-search-list/static/js/2.3a29a369.chunk.js",
+    "static/js/2.3a29a369.chunk.js.map": "/random-anime-recommendation-and-search-list/static/js/2.3a29a369.chunk.js.map",
     "index.html": "/random-anime-recommendation-and-search-list/index.html",
     "static/css/2.61b4cb56.chunk.css.map": "/random-anime-recommendation-and-search-list/static/css/2.61b4cb56.chunk.css.map",
     "static/css/main.ea2ecf1f.chunk.css.map": "/random-anime-recommendation-and-search-list/static/css/main.ea2ecf1f.chunk.css.map",
-    "static/js/2.2c73301e.chunk.js.LICENSE.txt": "/random-anime-recommendation-and-search-list/static/js/2.2c73301e.chunk.js.LICENSE.txt",
+    "static/js/2.3a29a369.chunk.js.LICENSE.txt": "/random-anime-recommendation-and-search-list/static/js/2.3a29a369.chunk.js.LICENSE.txt",
     "static/media/anime1.fa7e8157.png": "/random-anime-recommendation-and-search-list/static/media/anime1.fa7e8157.png",
     "static/media/index.css": "/random-anime-recommendation-and-search-list/static/media/animeBg.c046cd3e.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.952b13df.js",
     "static/css/2.61b4cb56.chunk.css",
-    "static/js/2.2c73301e.chunk.js",
+    "static/js/2.3a29a369.chunk.js",
     "static/css/main.ea2ecf1f.chunk.css",
-    "static/js/main.7ac447a3.chunk.js"
+    "static/js/main.79678bbc.chunk.js"
   ]
 }
