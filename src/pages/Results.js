@@ -18,11 +18,10 @@ const Results = () => {
         }
         
         }
-        console.log(search.animeData);
-    },[search])
+     },[search])
     return (<Box mt={2}>
              { (dataStatus && <AnimeList data={search.animeData} />) || (!dataStatus && 
-              <Typography variant="h4" >Data Empty!</Typography>)
+              <Typography variant="h4" className="home-typo">Data Empty!</Typography>)
               }
             </Box>);
 }

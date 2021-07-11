@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core';
+import { Typography} from '@material-ui/core';
 import React, { useContext, useState,useEffect } from 'react'
 import AnimeInfo from '../components/AnimeInfo';
 import {searchContext} from '../context/search';
@@ -26,7 +26,8 @@ const ViewSingle=()=>{
     },[search])
     
     return( <Box mt={12}>{
-        ( dataStatus && <AnimeInfo info={search.singleData} /> ) || (<Typography variant="h4" component="h2">
+        ( dataStatus && <AnimeInfo info={search.singleData} />
+            ) || (<Typography variant="h4" component="h2">
      Data Empty!
      </Typography>)
       }

@@ -1,7 +1,16 @@
-import React from 'react';
-import {Grid,Paper,Typography,Link} from '@material-ui/core';
+import {Grid,Paper,Typography,Link,Button,Snackbar} from '@material-ui/core';
+import MuiAlert from '@material-ui/lab/Alert';
+import AddIcon from '@material-ui/icons/Add';
 import './singleViewStyle.scss';
+import { useContext,useState } from 'react';
+import { searchContext } from '../context/search';
+import '../styles/AnimeInfo.scss';
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+  }
 const AnimeInfo= ({info})=> {
+    const search = useContext(searchContext);
+    const [open,setOpen] = useState(false);
     const{
         title,
         image_url,
@@ -10,9 +19,25 @@ const AnimeInfo= ({info})=> {
         airing,
         broadcast,
         score,
-        url
+        url,
+        mal_id
     } = info;
-    
+    const handleListClick=()=>{
+        var temp =[...search.watchList];
+        temp.push({title:title,episodes:(episodes?episodes:"N/A"),id:mal_id,url:url,image_url:image_url});
+        let object = temp.map(JSON.stringify);
+        let set = new Set(object);
+        temp = Array.from(set).map(JSON.parse);
+        search.setWatchList(temp);
+        setOpen(true);
+     }
+     const handleClose=(reason)=>{
+        if (reason === 'clickaway') {
+          return;
+        }
+        setOpen(false);
+       }
+       
     return <Grid 
            container
            spacing={10}
@@ -23,7 +48,7 @@ const AnimeInfo= ({info})=> {
            >
            <Grid item >
                <div className="imageClass" >
-               <img src = {image_url} alt="" style= { { maxHeight:250 } } />
+               <img src = {image_url} alt="" style= { { maxHeight:250 } } key={image_url} />
                </div>
             </Grid>
         <Paper elevation={3} className="singleView-paper" >
@@ -31,19 +56,28 @@ const AnimeInfo= ({info})=> {
              Title:{title}</Typography>
          <Typography variant="h5" component="h2" className="singleView-typo">
              Airing:{ airing?"Yes":"No"}</Typography>
-         <Typography variant="h5" component="h2" className="singleView-typo">Broadcast:{broadcast}
+         <Typography variant="h5" component="h2" className="singleView-typo">Broadcast:{broadcast?broadcast:"N/A"}
          </Typography>
-         <Typography variant="h5" component="h2" className="singleView-typo">Score:{score}
+         <Typography variant="h5" component="h2" className="singleView-typo">Score:{score?score:"N/A"}
          </Typography>
-         <Typography variant="h5" component="h2" className="singleView-typo">Rating:{rating}
+         <Typography variant="h5" component="h2" className="singleView-typo">Rating:{rating?rating:"N/A"}
          </Typography>
-         <Typography variant="h5" component="h2" className="singleView-typo">Episodes:{episodes}
+         <Typography variant="h5" component="h2" className="singleView-typo">Episodes:{episodes?episodes:"N/A"}
          </Typography>
          <Link type="button" variant="body1" href={url} style={{color:"lightgreen"}}>
              MyAnimeList
-         </Link>
+         </Link><br/>
+         <Button   variant="outlined" className="button-color" onClick={handleListClick} >
+              <font family='Product Sans' size='4.5'>Add to Watch List</font>
+             <AddIcon  />
+             </Button>
+             <Snackbar  anchorOrigin={{ vertical: 'top', horizontal: 'right' }} open={open} autoHideDuration={3000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success">
+               {title} added to watchlist!
+              </Alert>
+             </Snackbar>
         </Paper>
-        </Grid>
+       </Grid>
 }
 
 export default AnimeInfo

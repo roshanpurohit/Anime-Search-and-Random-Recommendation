@@ -7,14 +7,21 @@ import {HashRouter as Router,Switch,Route} from 'react-router-dom';
 import { useState } from 'react';
 import { searchContext} from '../context/search';
 import About from './About';
+import MyList from './MyList';
 function App() {
   const [animeData,setAnimeData]=useState([]);
   const [ singleData,setSingle] = useState({});
+  const[watchList,setList]=useState(
+    localStorage.getItem('myWatchList')?
+    JSON.parse(localStorage.getItem('myWatchList')):[]);
   const setData = (data)=>{
       setAnimeData(data);
   }
   const setSingleData =(data)=>{
     setSingle(data);
+  }
+  const setWatchList=(data)=>{
+    setList(data);
   }
   const search = (searchedTerm)=>
   {
@@ -24,7 +31,7 @@ function App() {
   }
   return (
     <searchContext.Provider value = {
-      {animeData,singleData,setData,setSingleData,search}
+      {animeData,singleData,watchList,setWatchList,setData,setSingleData,search}
       } >
     <div className="App">
       <div className="blur">
@@ -47,7 +54,9 @@ function App() {
               <Route exact  path="/random-recommendation" >
                <RandomRec/>
               </Route>
-              
+              <Route exact  path="/MyList" >
+               <MyList/>
+              </Route>
             </Switch>
         </Router>
         </div>

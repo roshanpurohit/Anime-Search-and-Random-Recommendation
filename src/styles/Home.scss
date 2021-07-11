@@ -20,10 +20,10 @@
 .home-paper{
   
     border-radius: 20px !important;
-    
-    padding:40px !important;
+    padding:20px !important;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     
   }
 .home-Typo{
@@ -31,26 +31,16 @@
     color:pink !important;
     
   }
-.ORcard{
-    padding: 40px !important;
-    width: 70px !important;
-    height: 70px !important;
-    border-radius:10px !important;
-    font-size: 20px !important;
-    justify-content: center !important;
-    align-items: center !important;
-    align-content: center !important;
-
-}
-.home-recommendButton{
+.home-Button{
     background-color: rgb(64, 82, 243) !important;
     color:rgb(255, 255, 255) !important;
 }
-.home-recommendButton:hover{
+.home-Button:hover{
     transform: scale(1.1);
 }
-.or-img{
-    position: relative;
-    top : 0px;
-    left:150px;
+.home-ListButtonpaper{
+    padding:10px !important;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px !important;
 }

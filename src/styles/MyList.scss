@@ -1,0 +1,27 @@
+.listElement{
+    background-color: rgb(64, 82, 243) ;
+    border-radius: 25px;
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 5px;
+    display:block;
+    margin: 10px 0 ;
+    padding:20px;
+    max-width: 550px;
+    justify-content: space-between;
+  }
+.listElement:hover{
+    transform: scale(1.04);
+}
+.heading-typo{
+     color:pink !important;
+     border-radius: 8px !important;
+     background-color: rgb(64, 82, 243) !important;
+     font-family: 'Product Sans'  !important;
+     padding:5px !important;
+}
+
+.list-buttons{
+    min-width: max-content;
+ }
+ 

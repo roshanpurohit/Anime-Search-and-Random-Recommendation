@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { searchContext } from '../context/search';
 import { useHistory } from 'react-router-dom';
+import '../styles/Navbar.scss';
 const NavBar = () => {
     const search = useContext(searchContext);
     const move = useHistory();
@@ -20,28 +21,30 @@ const NavBar = () => {
     return (  
        
 <Navbar className="navbar-color" expand="lg" variant="light" position="sticky">
-   <Navbar.Brand href="/random-anime-recommendation-and-search-list/#/"><div className="font-color">ANIME LIST VIEWER</div>
- </Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  <Navbar.Collapse id="basic-navbar-nav">
-    <Nav className="ml-auto">
-    <Form inline onSubmit={handleSubmit} className="navBar-form">
-      <FormControl type="text" placeholder="Search" className="navBar-searchBar" onChange={(e)=>{setInput(e.target.value)}} />
-      <IconButton
-            variant="contained" 
-            color="primary"
-            type="submit"
-            disabled={!input}
-            className="navBar-iconButton"
-            onClick={handleSubmit}
-             >
-            <SearchIcon/>
-             </IconButton>
-    </Form>
-      <Nav.Link href="/random-anime-recommendation-and-search-list/" ><Button  variant="custom" className ="button-color" >Home</Button> </Nav.Link>
-      <Nav.Link href="/random-anime-recommendation-and-search-list/#/about"><Button  variant="custom" className ="button-color" >About</Button></Nav.Link>
+   <Navbar.Brand href="/random-anime-recommendation-and-search-list/#/"><div className="font-color">ANIME LIST </div>
+   </Navbar.Brand>
+    
+     <Nav className="ml-auto">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+       <Navbar.Collapse id="basic-navbar-nav">
+          <Form inline onSubmit={handleSubmit} className="navBar-form">
+            <FormControl type="text" placeholder="Search" className="navBar-searchBar" onChange={(e)=>{setInput(e.target.value)}} />
+            <IconButton
+                  variant="contained" 
+                  color="primary"
+                  type="submit"
+                  disabled={!input}
+                  className="navBar-iconButton"
+                  onClick={handleSubmit}
+                  >
+                  <SearchIcon/>
+                  </IconButton>
+          </Form>
+          <Nav.Link href="/random-anime-recommendation-and-search-list/" ><Button  variant="custom" className ="button-color" >Home</Button> </Nav.Link>
+          <Nav.Link href="/random-anime-recommendation-and-search-list/#/MyList"><Button  variant="custom" className ="button-color" >My Watchlist</Button></Nav.Link>
+          <Nav.Link href="/random-anime-recommendation-and-search-list/#/about"><Button  variant="custom" className ="button-color" >About</Button></Nav.Link>
+          </Navbar.Collapse>
       </Nav>
-  </Navbar.Collapse>
 </Navbar>
 
 
