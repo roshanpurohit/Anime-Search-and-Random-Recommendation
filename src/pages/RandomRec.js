@@ -42,8 +42,8 @@ const  RandomRec = () => {
           {
             if(response.status >=400 && response.status < 500) {
                  response.json().then((data) => {
-                console.log(data.error);
-                console.log("Try another ID");
+                 console.log(data.error);
+                 console.log("Trying another ID...");
                  setRandom(Math.floor(Math.random()*1000 + 1));
               })
           } 
