@@ -51,7 +51,7 @@ const NavBar = () => {
                 Fetching Data...
             </Backdrop>
             <Navbar.Brand
-                href="/random-anime-recommendation-and-search-list/#/"
+                href="/Anime-Search-and-Random-Recommendation/#/"
                 style={{ color: "pink", fontFamily: "DELIRIUM NCV", fontSize: "60px", padding: "0px" }}
             >
                  <img
@@ -85,17 +85,17 @@ const NavBar = () => {
                             <SearchIcon />
                         </IconButton>
                     </Form>
-                    <Nav.Link href="/random-anime-recommendation-and-search-list/">
+                    <Nav.Link href="/Anime-Search-and-Random-Recommendation/">
                         <Button variant="custom" className="navbar-button">
                             Home
                         </Button>{" "}
                     </Nav.Link>
-                    <Nav.Link href="/random-anime-recommendation-and-search-list/#/MyList">
+                    <Nav.Link href="/Anime-Search-and-Random-Recommendation/#/MyList">
                         <Button variant="custom" className="navbar-button">
                             My Watchlist
                         </Button>
                     </Nav.Link>
-                    <Nav.Link href="/random-anime-recommendation-and-search-list/#/about">
+                    <Nav.Link href="/Anime-Search-and-Random-Recommendation/#/about">
                         <Button variant="custom" className="navbar-button">
                             About
                         </Button>
