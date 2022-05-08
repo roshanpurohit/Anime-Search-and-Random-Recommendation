@@ -1,4 +1,4 @@
-# Random Anime recommendation,search engine and watch list keeper.
+# Anime search and Random Recommendation with watch list feature.
 
 A website  hosted on GitHub pages https://roshanpurohit.github.io/random-anime-recommendation-and-search-list/
 for keeping track of anime you want to watch with random suggestions.
