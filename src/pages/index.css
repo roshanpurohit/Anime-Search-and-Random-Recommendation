@@ -6,11 +6,23 @@
   src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
 
-html,body {
+@font-face {
+  font-family: 'DELIRIUM NCV';
+  src: url('/src/fonts/DeliriumNcv-Vm5e.eot');
+  src: url('/src/fonts/DeliriumNcv-Vm5e.eot?#iefix') format('embedded-opentype'),
+       url('/src/fonts/DeliriumNcv-Vm5e.woff2') format('woff2'),
+       url('/src/fonts/DeliriumNcv-Vm5e.woff') format('woff'),
+       url('/src/fonts/DeliriumNcv-Vm5e.ttf')  format('truetype'),
+       url('/src/fonts/DeliriumNcv-Vm5e.svg#DELIRIUM NCV') format('svg');
+}
+html{
+ height: 100%;
+}
+  body {
   
-  background: url(../components/animeBg.jpg);
+   background: url(../components/animeBg.jpg);
    background-size:cover!important;
-   height: auto !important;
+   height: 100%;
    min-height: 100vh !important;
    max-width: 100%;
    overflow-x:hidden;
@@ -18,11 +30,11 @@ html,body {
   }
 .blur{
   background: rgba(17, 10, 10, 0.2); 
-  background-size: cover !important;
-  backdrop-filter: blur(3px);
-  min-height:100vh !important;
-  height: auto !important;
-  width:100% !important;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  min-height:100vh;
+  height: 100%;
+  width:100%;
 }
 .font-color{
   background-color: rgb(64, 82, 243) !important;
@@ -33,15 +45,15 @@ html,body {
   padding:4px;
 }
 .button-color{
-  
-  background-color: rgb(64, 82, 243) !important;
-  color:pink !important; 
-  border-radius: 10px !important;
+  color: pink !important;
+  border: 2px solid pink !important;
   font-family: 'Product Sans' !important;
+  background-color: rgb(64, 82, 243) !important;
 }
 .button-color:hover{
-  background-color: pink !important;
-  color:rgb(64, 82, 243) !important;
+  
+    transform: scale(1.04);
+
 }
 
 

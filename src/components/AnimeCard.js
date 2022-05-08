@@ -10,7 +10,7 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 const AnimeCard = ({single})=> {
-    const [open,setOpen]  = useState(false);
+    const [snackBarOpen,setSnackBarOpen]  = useState(false);
     const move = useHistory();
     const search =  useContext(searchContext);
     const imageUrl = single.image_url;
@@ -27,23 +27,15 @@ const AnimeCard = ({single})=> {
           search.setSingleData(data);
           localStorage.setItem('singleData',JSON.stringify(data));
       })
+      .catch((e)=>{
+        setSnackBarOpen(true);
+      })
       move.push('./ViewSingle');
     }
-    const handleListClick=()=>{
-       var temp =[...search.watchList];
-       temp.push({title:single.title,episodes:(single.episodes?single.episodes:"N/A"),id:single.mal_id,url:single.url,image_url:imageUrl});
-       let object = temp.map(JSON.stringify);
-       let set = new Set(object);
-       temp = Array.from(set).map(JSON.parse);
-       search.setWatchList(temp);
-       setOpen(true);
+    const handleSnackBarClose=()=>{
+      setSnackBarOpen(false);
     }
-    const handleClose=(reason)=>{
-      if (reason === 'clickaway') {
-        return;
-      }
-     setOpen(false);
-     }
+    
     return (
         <GridListTile className="animeCard__container">
           <Grid container item xs={12} >
@@ -59,24 +51,22 @@ const AnimeCard = ({single})=> {
               <Link type="button" variant="body1" style={{marginBottom:0,color:"lightgreen"}} onClick={handleClick} >
                Click for more                        
               </Link>
-              <Tooltip title="Add to watch list" placement="top">
-              <Button className="add-button" onClick={handleListClick} ><AddIcon/></Button>
-              </Tooltip>
-              <Snackbar 
-               anchorOrigin={ {vertical: 'top', horizontal: 'right'} }
-               open= {open} 
-               autoHideDuration={2000} 
-               onClose={handleClose}
-              >
-              <Alert onClose={handleClose} severity="success">
-               {single.title} added to watchlist!
-              </Alert>
-             </Snackbar>
               </div>
 
             </Paper>
           </Grid>
+          <Snackbar
+                    anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                    open={snackBarOpen}
+                    autoHideDuration={3000}
+                    onClose={handleSnackBarClose}
+                >
+                    <Alert onClose={handleSnackBarClose} severity="error">
+                        Could not Fetch data!
+                    </Alert>
+                </Snackbar>
         </GridListTile>
+        
     );
     
 }

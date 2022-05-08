@@ -42,17 +42,27 @@ p {
 }
 .random-typo
 {
-    font-family: 'Product Sans' !important;
+    text-align: center !important;
+    font-family: 'DELIRIUM NCV' !important;
     width:fit-content!important;
     color:pink !important;
     background-color:  rgb(64, 82, 243) !important;
     border-radius: 5px;
     justify-content: center !important;
-    margin:20px 0  !important;
+    margin:20px 0;
+    padding: 10px;
 }
 .random-image{
     border-radius: 8px;
 }
 .random-buttons >:not(:last-child){
   margin-bottom: 10px !important;
+}
+.inner-recommend-paper{
+  border-radius:8px;
+  border: 3px solid pink;
+  color:pink;
+  background-color: rgb(64, 82, 243);
+  font-family: 'DELIRIUM NCV';
+  
 }

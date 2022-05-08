@@ -6,23 +6,22 @@ const Results = () => {
     const search = useContext(searchContext);
     const [ dataStatus, setDataStatus] =  useState(true);
     useEffect(()=>{
-        if(search.animeData=== undefined || search.animeData.length=== 0)
+        if(search.animeData === undefined || search.animeData.length === 0)
         {
             try{
             search.setData(JSON.parse(localStorage.getItem('myData')));
-            
              }
-        catch(error){
-            console.log(error);
+            catch(error){
             setDataStatus(false);
         }
         
         }
      },[search])
-    return (<Box mt={2}>
+    return (<Box mt={2} style={{textAlign:'center',alignContent:'center'}}>
              { (dataStatus && <AnimeList data={search.animeData} />) || (!dataStatus && 
               <Typography variant="h4" className="home-typo">Data Empty!</Typography>)
               }
+            
             </Box>);
 }
  

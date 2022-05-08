@@ -25,9 +25,7 @@ function App() {
   }
   const search = (searchedTerm)=>
   {
-     return fetch(
-       `https://api.jikan.moe/v3/search/anime?q=${searchedTerm}&limit=20`
-       ).then((response)=>response.json());
+     return
   }
   return (
     <searchContext.Provider value = {

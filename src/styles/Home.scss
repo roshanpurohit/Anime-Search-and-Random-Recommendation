@@ -1,3 +1,54 @@
+.home-outer{
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    flex-direction: row;
+    
+    align-items: center;
+  }
+.home-recommend{
+  margin-top: 100px;
+  border-radius:8px;
+  color:pink;
+  background-color: rgb(64, 82, 243);
+  margin-left: 50px;
+  font-family: 'DELIRIUM NCV';
+  font-size: 72px;
+  height: 340px;
+  width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.home-recommend:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+}
+.home-watchlist-button{
+  border-radius:8px;
+  color:pink;
+  background-color: rgb(64, 82, 243);
+  font-family: 'DELIRIUM NCV';
+  font-size: 72px;
+  text-align: center;
+  width: 400px;
+  align-items: center;
+}
+.home-watchlist-button:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+}
+.home-search{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+  align-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+ 
+}
 .home-form{
     border-radius: 5px;
     padding: 30px;

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DELIRIUM NCV';
+    src: url('/src/fonts/DeliriumNcv-Vm5e.eot');
+    src: url('/src/fonts/DeliriumNcv-Vm5e.eot?#iefix') format('embedded-opentype'),
+         url('/src/fonts/DeliriumNcv-Vm5e.woff2') format('woff2'),
+         url('/src/fonts/DeliriumNcv-Vm5e.woff') format('woff'),
+         url('/src/fonts/DeliriumNcv-Vm5e.ttf')  format('truetype'),
+         url('/src/fonts/DeliriumNcv-Vm5e.svg#DELIRIUM NCV') format('svg');
+}
